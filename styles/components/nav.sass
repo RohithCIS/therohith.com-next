@@ -1,0 +1,44 @@
+.side-nav
+    position: fixed
+    right: 0
+    height: calc(100vh - 40vh)
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    padding-top: 20vh
+    padding-bottom: 20vh
+    & div
+        transition: 0.5s
+        padding: 30px
+        &:hover
+            transition: 0.5s
+            & i
+                font-size: 70px
+        & a
+            color: #ffffff
+            text-decoration: none
+    & i
+        transition: 0.5s
+        font-size: 40px
+
+@media only screen and (max-width: 600px)
+    .side-nav
+        position: fixed
+        bottom: 0
+        width: 100vw
+        height: auto
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+        align-items: center
+        padding: 0px
+        background-color: #111
+        & div
+            padding: 10px
+            &:hover
+                & i
+                    font-size: 30px
+        & i
+            font-size: 30px

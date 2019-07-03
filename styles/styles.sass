@@ -1,0 +1,46 @@
+// font-family: 'Comfortaa', cursive;
+// font-family: 'Alfa Slab One', cursive;
+
+.section-intro
+    background-image: url('/static/images/343.jpg')
+    height: calc(100vh - 60px)
+    padding: 30px
+    color: #fff
+    background-size: auto 170%
+    background-position: -220px -50px
+
+.section-contact
+    background-image: url('/static/images/space.jpg')
+    background-size: cover
+    background-position: center center
+    height: calc(100vh - 60px)
+    padding: 30px
+    color: #fff
+
+.circle-nav-container
+    margin-left: 10vw
+
+.circle-nav
+    display: flex
+    flex-direction: row
+    & svg
+        margin: 5px
+        cursor: pointer
+        & circle,line,text
+            transition: 0.5s
+        & text
+            font-size: 20px
+        &:hover
+            & .circle-highlight
+                stroke: rgb(103, 58, 183)
+            & circle
+                stroke-width: 40
+                stroke: rgb(139, 195, 74)
+                // stroke: rgb(233, 30, 99)
+            & text
+                font-size: 30px
+    & .circle-line
+        stroke: rgb(255,255,255)
+        stroke-width: 2
+    & .circle-text
+        font-family: 'Comfortaa', cursive
