@@ -25,7 +25,14 @@ class HomeComponent extends Component {
 
           <div className="circle-nav-container">
             <div className="circle-nav">
-              <svg width="240" height="240" xmlns="http://www.w3.org/2400/svg">
+              <svg
+                width="240"
+                height="240"
+                xmlns="http://www.w3.org/2400/svg"
+                onClick={() => {
+                  this.handleLink("/static/Resume_Rohith_Balaji.pdf");
+                }}
+              >
                 <g>
                   <title>Resume</title>
                   <text x="0" y="110" fill="#fff" className="circle-text">
@@ -96,37 +103,43 @@ class HomeComponent extends Component {
               </svg>
             </div>
             <div className="circle-nav">
-              <svg width="240" height="240" xmlns="http://www.w3.org/2400/svg">
-                <g>
-                  <title>About</title>
-                  <text x="20" y="130" fill="#fff" className="circle-text">
-                    About
-                  </text>
-                  <line
-                    x1="20"
-                    y1="140"
-                    x2="140"
-                    y2="140"
-                    className="circle-line"
-                  />
-                  <line
-                    x1="180"
-                    y1="110"
-                    x2="140"
-                    y2="140"
-                    className="circle-line"
-                  />
-                  <circle
-                    className="circle_animation"
-                    r="100"
-                    cy="10"
-                    cx="220"
-                    strokeWidth="20"
-                    stroke="#fff"
-                    fill="none"
-                  />
-                </g>
-              </svg>
+              <Link href="/about">
+                <svg
+                  width="240"
+                  height="240"
+                  xmlns="http://www.w3.org/2400/svg"
+                >
+                  <g>
+                    <title>About</title>
+                    <text x="20" y="130" fill="#fff" className="circle-text">
+                      About
+                    </text>
+                    <line
+                      x1="20"
+                      y1="140"
+                      x2="140"
+                      y2="140"
+                      className="circle-line"
+                    />
+                    <line
+                      x1="180"
+                      y1="110"
+                      x2="140"
+                      y2="140"
+                      className="circle-line"
+                    />
+                    <circle
+                      className="circle_animation"
+                      r="100"
+                      cy="10"
+                      cx="220"
+                      strokeWidth="20"
+                      stroke="#fff"
+                      fill="none"
+                    />
+                  </g>
+                </svg>
+              </Link>
               <Link href="/contact">
                 <svg
                   width="240"
