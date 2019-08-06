@@ -179,6 +179,50 @@ class HomeComponent extends Component {
               </Link>
             </div>
           </div>
+
+          <div className="resp-nav-container">
+            <div className="resp-nav-flex">
+              <span
+                style={{ backgroundColor: "#E91E63", border: "2px solid #fff" }}
+                onClick={() => {
+                  this.handleLink("/static/Resume_Rohith_Balaji.pdf");
+                }}
+              >
+                RESUME
+              </span>
+              <span
+                style={{ backgroundColor: "#8BC34A", border: "2px solid #fff" }}
+                onClick={() => {
+                  this.handleLink("https://blog.therohith.com");
+                }}
+              >
+                BLOG
+              </span>
+            </div>
+            <div className="resp-nav-flex">
+              <Link href="/about">
+                <span
+                  style={{
+                    backgroundColor: "#03A9F4",
+                    border: "2px solid #fff"
+                  }}
+                >
+                  ABOUT
+                </span>
+              </Link>
+              <Link href="/contact">
+                <span
+                  style={{
+                    backgroundColor: "#673AB7",
+                    border: "2px solid #fff"
+                  }}
+                >
+                  CONTACT
+                </span>
+              </Link>
+            </div>
+          </div>
+
           <FooterComponent />
         </section>
       </>

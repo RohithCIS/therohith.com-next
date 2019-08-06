@@ -1,5 +1,8 @@
 // font-family: 'Comfortaa', cursive;
 // font-family: 'Alfa Slab One', cursive;
+*
+    &:focus
+        outline: none
 
 .section-intro
     background-image: url('/static/images/343.jpg')
@@ -16,6 +19,34 @@
     height: calc(100vh - 60px)
     padding: 30px
     color: #fff
+
+.section-about
+    background-image: url('/static/images/totem.jpg')
+    background-size: cover
+    background-position: center center
+    height: calc(100vh - 60px)
+    padding: 30px
+    color: #fff
+    & div
+        padding: 10px
+        max-width: 512px
+        font-family: 'Comfortaa', cursive
+        background-color: rgba(0, 0, 0, 0.3)
+        & a
+            text-decoration: none
+            cursor: pointer
+            padding: 10px
+            font-size: 20px
+            width: 100px
+            background-color: #E91E63
+            color: #ffffff
+            border: 3px solid #E91E63
+            font-family: 'Comfortaa', cursive
+            transition: 0.5s
+            &:hover
+                background-color: #fff
+                transition: 0.5s
+                color: #E91E63
 
 .circle-nav-container
     margin-left: 10vw
@@ -45,6 +76,65 @@
     & .circle-text
         font-family: 'Comfortaa', cursive
 
+.resp-nav-container
+    display: none;
+
+.contact-form
+    display: flex
+    justify-content: center
+    align-items: center
+    & .large-btn-flex
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        & .large-btn
+            font-size: 100px
+            padding: 20px
+            margin: 20px
+            width: 200px
+            background-color: #E91E63
+            text-align: center
+            transition: 0.5s
+            cursor: pointer
+            &:hover
+                background-color: #ffffff
+                color: #e91e63
+                transition: 0.5s
+    & form
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 350px
+        background-color: rgba(255, 255, 255, 0.9)
+        padding: 20px
+        & div
+            width: 100%
+            margin: 20px
+        & button
+            padding: 10px
+            font-size: 20px
+            width: 100px
+            background-color: #E91E63
+            color: #ffffff
+            border: 3px solid #E91E63
+            font-family: 'Comfortaa', cursive
+            transition: 0.5s
+            &:hover
+                background-color: #fff
+                transition: 0.5s
+                color: #E91E63
+        & input,textarea
+            padding: 10px
+            font-size: 20px
+            width: calc(100% - 26px)
+            margin: 20px
+            border: 3px solid #ddd
+            font-family: 'Comfortaa', cursive
+            &:focus
+                border-bottom: 3px solid #E91E63
+
 @media only screen and (max-width: 600px)
     .circle-nav-container
         display: none
@@ -57,3 +147,28 @@
             text-align: center
             width: calc(100vw - 60px)
             background-color: rgba(0,0,0,0.7)
+
+    .section-about
+        & div
+            background-color: rgba(0, 0, 0, 0.7)
+
+    .resp-nav-container
+        margin-top: 15vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        min-height: 50vh
+
+    .resp-nav-flex
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+        width: 100%
+        & span
+            width: 30%
+            text-align: center
+            padding: 10px
+            margin: 10px
+            font-family: 'Comfortaa', cursive
