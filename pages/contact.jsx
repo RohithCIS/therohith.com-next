@@ -1,14 +1,23 @@
 import "../styles/styles.sass";
 import React, { Component } from "react";
+import { sendMail } from "../middleware/mailer";
 import LinksComponent from "../components/nav";
 import NameComponent from "../components/name";
 import FooterComponent from "../components/footer";
 
 class ContactComponent extends Component {
-  state = { name: "", email: "", message: "" };
+  state = { name: "", email: "", message: "", showMessage: false };
 
-  handleFormChange = (e, { name, value }) => {
-    this.setState({ [name]: value });
+  handleFormChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    sendMail(this.state, done => {
+      this.setState({ name: "", email: "", message: "", showMessage: true });
+      console.log(done);
+    });
   };
 
   handleLink = url => {
@@ -22,27 +31,42 @@ class ContactComponent extends Component {
   }
 
   render() {
+    const { name, email, message, showMessage } = this.state;
+
     return (
       <>
         <LinksComponent />
         <section className="section-contact">
           <NameComponent />
           <div className="contact-form">
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <input
                 type="text"
                 placeholder="Full Name"
                 name="name"
                 autoComplete="name"
                 autoFocus
+                value={name}
+                onChange={this.handleFormChange}
               />
               <input
                 type="email"
                 placeholder="E-Mail"
                 name="email"
                 autoComplete="email"
+                value={email}
+                onChange={this.handleFormChange}
               />
-              <textarea rows="5" placeholder="Message" name="message" />
+              <textarea
+                rows="5"
+                placeholder="Message"
+                name="message"
+                value={message}
+                onChange={this.handleFormChange}
+              />
+              {this.state.showMessage && (
+                <span style={{ color: "#000" }}>Message Sent!</span>
+              )}
               <div>
                 <button type="submit">Send</button>
               </div>

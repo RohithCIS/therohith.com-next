@@ -6,7 +6,7 @@
 
 .section-intro
     background-image: url('/static/images/343.jpg')
-    height: calc(100vh - 60px)
+    min-height: calc(100vh - 60px)
     padding: 30px
     color: #fff
     background-size: auto 170%
@@ -16,7 +16,7 @@
     background-image: url('/static/images/space.jpg')
     background-size: cover
     background-position: center center
-    height: calc(100vh - 60px)
+    min-height: calc(100vh - 60px)
     padding: 30px
     color: #fff
 
@@ -24,7 +24,7 @@
     background-image: url('/static/images/totem.jpg')
     background-size: cover
     background-position: center center
-    height: calc(100vh - 60px)
+    min-height: calc(100vh - 60px)
     padding: 30px
     color: #fff
     & div
@@ -109,6 +109,8 @@
         width: 350px
         background-color: rgba(255, 255, 255, 0.9)
         padding: 20px
+        & span
+            font-family: 'Comfortaa', cursive
         & div
             width: 100%
             margin: 20px
@@ -136,6 +138,31 @@
                 border-bottom: 3px solid #E91E63
 
 @media only screen and (max-width: 600px)
+
+    .contact-form
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column-reverse
+        & .large-btn-flex
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            height: 100%
+            & .large-btn
+                font-size: 30px
+                padding: 20px
+                margin: 20px
+                width: auto
+                background-color: #E91E63
+                text-align: center
+                transition: 0.5s
+                cursor: pointer
+                &:hover
+                    background-color: #ffffff
+                    color: #e91e63
+                    transition: 0.5s
+
     .circle-nav-container
         display: none
 
@@ -149,6 +176,7 @@
             background-color: rgba(0,0,0,0.7)
 
     .section-about
+        margin-bottom: 50px
         & div
             background-color: rgba(0, 0, 0, 0.7)
 
